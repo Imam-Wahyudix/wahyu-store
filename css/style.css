@@ -1,0 +1,562 @@
+:root {
+  --primary: aquamarine;
+  --bg: rgb(7, 16, 96);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+
+html{
+scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "pooppins", sans-serif;
+  background-color: rgb(111, 235, 190);
+  color: #fff;
+  
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--bg);
+  border-bottom: 1px solid #523d27;
+  position: fixed;
+  top: o;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: rgb(125, 248, 9);
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #fff;
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: var(--primary);
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: #fff;
+}
+#daftar {
+  display: none;
+  color: var(--primary);
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(111, 235, 190, 0) 65%,
+    rgba(111, 235, 190, 0.3) 75%,
+    rgba(143, 231, 199, 0.6) 90%,
+    rgba(126, 255, 208, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+section.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+.hero .content h1 {
+  color: rgb(125, 248, 9);
+  font-size: 5em;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5),
+    0px 0px 15px rgba(111, 235, 190, 0.7);
+  line-height: 1;
+}
+
+.hero .content h1 span {
+  color: rgb(111, 235, 190);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5),
+    0px 0px 15px rgba(35, 45, 130, 0.7);
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1;
+  font-weight: 105;
+  text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.5),
+    0px 0px 15px rgba(9, 11, 10, 0.7);
+}
+
+.hero .content .cta {
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: rgb(119, 178, 31);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* hero section */
+
+/* tentang kami */
+
+.contact,
+.about {
+  padding: 6.5rem 1.5% 1.5rem;
+}
+.about h2,
+.contact h2
+{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: rgb(246, 184, 15);
+  text-shadow: 0px 0.5px 1px#0f0f0e;
+}
+
+.contact span,
+.about span,
+.barang span{
+  color: rgb(35, 228, 17);
+}
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  box-shadow: 1px 1px 10px#000000ae;
+  border-radius: 0px;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0.5rem;
+  background-color: rgba(244, 243, 243, 0.355);
+  background-blend-mode: difference; /* Background putih semi-transparan di belakang teks */
+
+  padding: 1rem;
+  border-radius: 0rem; /* Membuat sudut melengkung pada background teks */
+}
+.about .row .content h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: rgb(246, 184, 15);
+  text-shadow: 0px 0.5px 1px#0f0f0e;
+}
+.about .row .content p {
+  color: #24240b;
+  margin-bottom: 0.7rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font: bold;
+}
+.about .row .content h4 {
+  color:rgb(246, 184, 15);
+  text-shadow: 0px 0.5px 1px#0f0f0e;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+#read-more {
+  display: none;
+}
+
+/* Tentang kami */
+
+/* Barang */
+.barang {
+  padding: 6.5rem 1.5% 1.5rem;
+  margin-bottom: 0rem;
+}
+.barang h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color:rgb(246, 184, 15);
+  text-shadow: 0px 0.5px 1px#0f0f0e;
+}
+.barang p {
+  text-align: center;
+  max-width: 32rem;
+  margin: auto;
+  color: #24240b;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  font-family: "Courier New", Courier, monospace;
+  font: bold;
+}
+
+.barang .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.barang .row .barang-card {
+  text-align: center;
+  width: 25%;
+  flex: 0 0 24rem; 
+  margin: 0.5rem;
+}
+
+.barang .row .barang-card-img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.barang .row .barang-card-title {
+  margin: 0.7rem auto 0.5rem;
+  color: rgb(246, 184, 15);
+  font-size: 2rem;
+  text-shadow: 0px 0.5px 1px#0f0f0e;
+  text-align: center;
+}
+
+.barang .row .barang-card-price {
+  margin: 1rem auto 5rem;
+  font-size: 1.6rem;
+}
+
+/* Barang */
+
+/* contact */
+
+.contact .row {
+  display: flex;
+  margin-top: 2.5rem;
+  background-color:rgb(246, 184, 15);
+  box-shadow: 1px 1px 1px #0f0f0e;
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+  
+  
+}
+
+.contact .row .map {
+  flex: 1 1 35rem;
+  width: 100%;
+  object-fit: cover; 
+ 
+}
+
+.contact .row form {
+  flex: 1 1 35rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: rgb(9, 86, 241);
+  
+
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background-color:rgb(35, 228, 17);
+  border: 1.5px solid rgb(54, 122, 223);
+  padding-left: 2rem;
+
+  
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.6rem;
+  background: none;
+  color: rgb(9, 86, 241);
+  
+}
+.contact .row form .input-group input::placeholder {
+  color: rgb(9, 86, 241);
+  font-size: 1.6rem;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color:  rgb(9, 86, 241);
+  cursor: pointer;
+}
+
+
+
+/* contact */
+
+/* footer */
+footer {
+  background-color: var(--bg);
+  text-align: center;
+  padding: 1rem 0.3rem;
+  margin-top: 3rem;
+}
+footer .socials {
+  padding: 1rem 0;
+}
+footer .socials a {
+  color: var(--primary);
+  margin: 1rem;
+}
+footer .socials a :hover,
+footer .links a:hover {
+  color: #fff;
+
+}
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color:var(--primary);
+  padding: 0.7rem 1rem;
+}
+footer .credit a {
+  color: rgb(246, 184, 15);
+  font-weight: 700;
+}
+/* footer */
+/* media queris */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #daftar {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #79ade0;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  .about .row {
+    min-height: 100vh;
+    display: flex; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
+    background: url("../img/Tentang-kami.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .about .row .content {
+    background-color: rgba(
+      11,
+      11,
+      11,
+      0.1
+    ); /* Background putih semi-transparan di belakang teks */
+
+    padding: 2rem;
+    border-radius: 4rem; /* Membuat sudut melengkung pada background teks */
+  }
+  .about .row .about-img {
+    display: none;  
+  }
+
+  .about .row::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+      180deg,
+      rgba(111, 235, 190, 0) 65%,
+      rgba(111, 235, 190, 0.3) 75%,
+      rgba(143, 231, 199, 0.6) 90%,
+      rgba(126, 255, 208, 0.9) 100%
+    );
+  }
+
+  .about .row .content p {
+    color: rgb(239, 246, 240);
+    margin-bottom: 0.7rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2, 7rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font: bold;
+    text-shadow: 2px 2px 4px#0f0f0e;
+    
+  }
+  .contact .row {
+    flex-wrap: wrap;
+  }
+  .contact .row .map  {
+    height: 25rem;
+  }
+  .contact .row form {
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
+}
+
+  /* handphone */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+    #daftar {
+      display: inline-block;
+    }
+    .navbar .navbar-nav {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: #79ade0;
+      width: 30rem;
+      height: 100vh;
+      transition: 0.3s;
+    }
+    .navbar .navbar-nav.active {
+      right: 0;
+    }
+    .navbar .navbar-nav a {
+      color: #fff;
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+    .navbar .navbar-nav a::after {
+      transform-origin: 0;
+    }
+    .navbar .navbar-nav a:hover::after {
+      transform: scaleX(0.2);
+    }
+    .contact .row {
+      flex-wrap: wrap;
+    }
+
+    /* #dots { 
+      display: inline;
+      }
+  #more {
+    display: none;
+    }
+    #read-more {
+     font-size: 1.7rem;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bold;
+     font-weight: 100;
+     
+     
+      display: inline;
+      color: rgb(238, 246, 14); 
+      text-decoration: none; 
+      transition: color 0.3s ease, background-color 0.3s ease; 
+    }
+  
+  #read-more:hover {
+      color: rgb(69, 225, 69); 
+      text-shadow: 0px 0.5px 0.5px#0f0f0e;
+     background-color: rgba(224, 224, 224,0);
+      border-radius: 5px; 
+      padding: 0.2rem 0.5rem; /* Menambahkan padding untuk efek tombol */
+    /* } */
+ }
+
